@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
+import './Scroll.css';
 
 class Scroll extends Component {
   render() {
     return (
-      <div style={{overflowY: 'scroll', border: '1px solid black', height: '800px'}}>
+      <div className='scroller'>
         {this.props.children}
       </div>
     );
