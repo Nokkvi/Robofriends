@@ -12,3 +12,8 @@ h1 {
   font-weight: 250;
   color: #85d1cf;
 }
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
