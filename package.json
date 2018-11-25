@@ -11,15 +11,15 @@
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "sw-precache": "^5.2.1",
     "tachyons": "^4.11.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build  && cp manifest.json build/ && sw-precache --root='build/' --static-file-globs='build/**/!(*map*)'",
-    "gh-pages": "gh-pages -d build",
+    "build": "react-scripts build",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "homepage": "./"
+  "homepage": "https://nokkvi.github.io/Robofriends"
 }
