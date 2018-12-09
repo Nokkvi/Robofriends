@@ -1,6 +1,7 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 import ErrorBoundry from './ErrorBoundry';
+import { wrap } from 'module';
 
 describe('ErrorBoundry component', () => {
   it('expects to render ErrorBoundry component', () => {
