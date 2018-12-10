@@ -53,5 +53,18 @@ describe('ErrorBoundry component', () => {
     expect(wrapper3.instance().filterRobots()).toEqual(filterRobots);
   });
 
+  it('filters robots correctly 3', () => {
+    const mockProps4 = {
+      onRequestRobots: jest.fn(),
+      robots: [],
+      searchField: '',
+      isPending: true
+    }
+    const filterRobots = []
+    const wrapper4 = shallow(<MainPage { ...mockProps4 } />)
+    expect(wrapper4.instance().filterRobots()).toEqual(filterRobots);
+    expect(wrapper4.html()).toEqual('<h1 class=\"tc\">Loading Robots...</h1>');
+  });
+
 
 })
