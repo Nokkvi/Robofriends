@@ -2,8 +2,10 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import CardList from './CardList';
 
+import { IRobot } from './interfaces.d';
+
 it('expects to render Card component', () => {
-  const mockRobots = [
+  const mockRobots: IRobot[] = [
     {
       id: 1,
       name: 'John Smith',

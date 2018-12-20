@@ -26,7 +26,7 @@ describe('requestRobots', () => {
   const store = mockStore();
   beforeEach(() => {
     store.clearActions();
-    store.dispatch(actions.requestRobots());
+    store.dispatch<any>(actions.requestRobots());
   });
   
   it('handles requesting robots API', async () => {
@@ -37,15 +37,15 @@ describe('requestRobots', () => {
 
 //UTILS
 
-function findAction(store, type) {
-  return store.getActions().find(action => action.type === type);
+function findAction(store: any, type: any) {
+  return store.getActions().find((action: any) => action.type === type);
 }
 
-export function getAction(store, type) {
+export function getAction(store: any, type: any) {
   const action = findAction(store, type);
   if (action) return Promise.resolve(action);
 
-  return new Promise(resolve => {
+  return new Promise((resolve: Function) => {
     store.subscribe(() => {
       const action = findAction(store, type);
       if (action) resolve(action);

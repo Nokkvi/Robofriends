@@ -7,6 +7,6 @@ it('expects to render Header component', () => {
 })
 
 it('expects shouldComponentUpdate to return false', () => {
-  const wrapper = shallow(<Header />);
+  const wrapper = shallow<Header>(<Header />);
   expect(wrapper.instance().shouldComponentUpdate('', '')).toBe(false);
 });

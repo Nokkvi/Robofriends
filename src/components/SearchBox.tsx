@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class SearchBox extends Component {
+class SearchBox extends Component<{searchfield: string, searchChange: any}, {}> {
   render() {
     const {searchfield, searchChange} = this.props;
     return (

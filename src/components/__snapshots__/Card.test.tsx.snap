@@ -3,7 +3,16 @@
 exports[`expects to render Card component 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Card />,
+  Symbol(enzyme.__unrendered__): <Card
+    robot={
+      Object {
+        "email": "john@example.com",
+        "id": 1,
+        "name": "John Smith",
+        "username": "Johns",
+      }
+    }
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -20,12 +29,16 @@ ShallowWrapper {
       "children": Array [
         <img
           alt="robots"
-          src="https://robohash.org/undefined?200x200"
-/>,
+          src="https://robohash.org/1?200x200"
+        />,
         <div>
-          <h2 />
-          <p />
-</div>,
+          <h2>
+            John Smith
+          </h2>
+          <p>
+            john@example.com
+          </p>
+        </div>,
       ],
       "className": "tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5",
     },
@@ -37,7 +50,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "alt": "robots",
-          "src": "https://robohash.org/undefined?200x200",
+          "src": "https://robohash.org/1?200x200",
         },
         "ref": null,
         "rendered": null,
@@ -49,8 +62,12 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <h2 />,
-            <p />,
+            <h2>
+              John Smith
+            </h2>,
+            <p>
+              john@example.com
+            </p>,
           ],
         },
         "ref": null,
@@ -60,10 +77,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": "John Smith",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "John Smith",
             "type": "h2",
           },
           Object {
@@ -71,10 +88,10 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": "john@example.com",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "john@example.com",
             "type": "p",
           },
         ],
@@ -92,12 +109,16 @@ ShallowWrapper {
         "children": Array [
           <img
             alt="robots"
-            src="https://robohash.org/undefined?200x200"
-/>,
+            src="https://robohash.org/1?200x200"
+          />,
           <div>
-            <h2 />
-            <p />
-</div>,
+            <h2>
+              John Smith
+            </h2>
+            <p>
+              john@example.com
+            </p>
+          </div>,
         ],
         "className": "tc bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5",
       },
@@ -109,7 +130,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "alt": "robots",
-            "src": "https://robohash.org/undefined?200x200",
+            "src": "https://robohash.org/1?200x200",
           },
           "ref": null,
           "rendered": null,
@@ -121,8 +142,12 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h2 />,
-              <p />,
+              <h2>
+                John Smith
+              </h2>,
+              <p>
+                john@example.com
+              </p>,
             ],
           },
           "ref": null,
@@ -132,10 +157,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "John Smith",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "John Smith",
               "type": "h2",
             },
             Object {
@@ -143,10 +168,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "john@example.com",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "john@example.com",
               "type": "p",
             },
           ],

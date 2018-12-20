@@ -3,7 +3,10 @@
 exports[`expects to render SearchBox component 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SearchBox />,
+  Symbol(enzyme.__unrendered__): <SearchBox
+    searchChange={[Function]}
+    searchfield="test"
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -20,11 +23,11 @@ ShallowWrapper {
       "children": <input
         aria-label="Search Robots"
         className="pa3 ba b--green bg-lightest-blue"
-        onChange={undefined}
+        onChange={[Function]}
         placeholder="search robots"
         type="search"
-        value={undefined}
-/>,
+        value="test"
+      />,
       "className": "pa2",
     },
     "ref": null,
@@ -35,10 +38,10 @@ ShallowWrapper {
       "props": Object {
         "aria-label": "Search Robots",
         "className": "pa3 ba b--green bg-lightest-blue",
-        "onChange": undefined,
+        "onChange": [Function],
         "placeholder": "search robots",
         "type": "search",
-        "value": undefined,
+        "value": "test",
       },
       "ref": null,
       "rendered": null,
@@ -55,11 +58,11 @@ ShallowWrapper {
         "children": <input
           aria-label="Search Robots"
           className="pa3 ba b--green bg-lightest-blue"
-          onChange={undefined}
+          onChange={[Function]}
           placeholder="search robots"
           type="search"
-          value={undefined}
-/>,
+          value="test"
+        />,
         "className": "pa2",
       },
       "ref": null,
@@ -70,10 +73,10 @@ ShallowWrapper {
         "props": Object {
           "aria-label": "Search Robots",
           "className": "pa3 ba b--green bg-lightest-blue",
-          "onChange": undefined,
+          "onChange": [Function],
           "placeholder": "search robots",
           "type": "search",
-          "value": undefined,
+          "value": "test",
         },
         "ref": null,
         "rendered": null,

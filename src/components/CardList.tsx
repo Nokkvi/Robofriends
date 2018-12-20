@@ -1,19 +1,19 @@
 import React, {Component} from 'react';
 import Card from './Card';
 
-class CardList extends Component {
+import { IRobot } from './interfaces.d';
+
+class CardList extends Component<{robots: IRobot[]}, {}> {
   render() {
     const {robots} = this.props;
     return (
       <div>
         {
-          robots.map((user, i) => {
+          robots.map((user: IRobot, i: number) => {
             return (
               <Card 
               key={i} 
-              id={robots[i].id} 
-              name={robots[i].name} 
-              email={robots[i].email}
+              robot={user}
               />
             );
           })

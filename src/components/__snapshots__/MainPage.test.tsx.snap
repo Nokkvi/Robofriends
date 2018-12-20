@@ -5,10 +5,23 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MainPage
     isPending={false}
-    onRequestRobots={[Function]}
+    onRequestRobots={
+      [MockFunction] {
+        "calls": Array [
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": undefined,
+          },
+        ],
+      }
+    }
+    onSearchChange={[MockFunction]}
     robots={Array []}
     searchField=""
-/>,
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -25,19 +38,20 @@ ShallowWrapper {
       "children": Array [
         <div
           className="header"
->
+        >
           <Header />
           <SearchBox
-                    searchChange={undefined}
+            searchChange={[MockFunction]}
+            searchfield=""
           />
-</div>,
+        </div>,
         <Scroll>
           <ErrorBoundry>
-                    <CardList
-                              robots={Array []}
-                    />
+            <CardList
+              robots={Array []}
+            />
           </ErrorBoundry>
-</Scroll>,
+        </Scroll>,
       ],
       "className": "tc",
     },
@@ -51,8 +65,9 @@ ShallowWrapper {
           "children": Array [
             <Header />,
             <SearchBox
-              searchChange={undefined}
-/>,
+              searchChange={[MockFunction]}
+              searchfield=""
+            />,
           ],
           "className": "header",
         },
@@ -72,7 +87,8 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "searchChange": undefined,
+              "searchChange": [MockFunction],
+              "searchfield": "",
             },
             "ref": null,
             "rendered": null,
@@ -88,9 +104,9 @@ ShallowWrapper {
         "props": Object {
           "children": <ErrorBoundry>
             <CardList
-                        robots={Array []}
+              robots={Array []}
             />
-</ErrorBoundry>,
+          </ErrorBoundry>,
         },
         "ref": null,
         "rendered": Object {
@@ -100,7 +116,7 @@ ShallowWrapper {
           "props": Object {
             "children": <CardList
               robots={Array []}
-/>,
+            />,
           },
           "ref": null,
           "rendered": Object {
@@ -130,19 +146,20 @@ ShallowWrapper {
         "children": Array [
           <div
             className="header"
->
+          >
             <Header />
             <SearchBox
-                        searchChange={undefined}
+              searchChange={[MockFunction]}
+              searchfield=""
             />
-</div>,
+          </div>,
           <Scroll>
             <ErrorBoundry>
-                        <CardList
-                                    robots={Array []}
-                        />
+              <CardList
+                robots={Array []}
+              />
             </ErrorBoundry>
-</Scroll>,
+          </Scroll>,
         ],
         "className": "tc",
       },
@@ -156,8 +173,9 @@ ShallowWrapper {
             "children": Array [
               <Header />,
               <SearchBox
-                searchChange={undefined}
-/>,
+                searchChange={[MockFunction]}
+                searchfield=""
+              />,
             ],
             "className": "header",
           },
@@ -177,7 +195,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "searchChange": undefined,
+                "searchChange": [MockFunction],
+                "searchfield": "",
               },
               "ref": null,
               "rendered": null,
@@ -193,9 +212,9 @@ ShallowWrapper {
           "props": Object {
             "children": <ErrorBoundry>
               <CardList
-                            robots={Array []}
+                robots={Array []}
               />
-</ErrorBoundry>,
+            </ErrorBoundry>,
           },
           "ref": null,
           "rendered": Object {
@@ -205,7 +224,7 @@ ShallowWrapper {
             "props": Object {
               "children": <CardList
                 robots={Array []}
-/>,
+              />,
             },
             "ref": null,
             "rendered": Object {
