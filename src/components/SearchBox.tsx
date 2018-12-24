@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
-class SearchBox extends Component<{searchfield: string, searchChange: any}, {}> {
+class SearchBox extends Component<{
+  searchfield: string,
+  searchChange(event: React.SyntheticEvent<HTMLInputElement>): void,
+}, {}> {
   render() {
     const { searchfield, searchChange } = this.props;
     return (
