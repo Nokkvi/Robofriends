@@ -11,10 +11,10 @@ describe('ErrorBoundry component', () => {
       onSearchChange: jest.fn(),
       robots: [],
       searchField: '',
-      isPending: false
-    }
-    wrapper = shallow<MainPage>(<MainPage { ...mockProps }/>)
-  })
+      isPending: false,
+    };
+    wrapper = shallow<MainPage>(<MainPage { ...mockProps }/>);
+  });
 
   it('renders MainPage without crashing', () => {
     expect(wrapper).toMatchSnapshot();
@@ -27,16 +27,16 @@ describe('ErrorBoundry component', () => {
       robots: [{
         id: 3,
         name: 'John',
-        email: 'john@gmail.com'
+        email: 'john@gmail.com',
       }],
       searchField: 'j',
-      isPending: false
-    }
-    const wrapper2 = shallow<MainPage>(<MainPage { ...mockProps2 } />)
+      isPending: false,
+    };
+    const wrapper2 = shallow<MainPage>(<MainPage { ...mockProps2 } />);
     expect(wrapper2.instance().filterRobots()).toEqual([{
       id: 3,
       name: 'John',
-      email: 'john@gmail.com'
+      email: 'john@gmail.com',
     }]);
   });
 
@@ -47,13 +47,13 @@ describe('ErrorBoundry component', () => {
       robots: [{
         id: 3,
         name: 'John',
-        email: 'john@gmail.com'
+        email: 'john@gmail.com',
       }],
       searchField: 'a',
-      isPending: false
-    }
-    const filterRobots: IRobot[] = []
-    const wrapper3 = shallow<MainPage>(<MainPage { ...mockProps3 } />)
+      isPending: false,
+    };
+    const filterRobots: IRobot[] = [];
+    const wrapper3 = shallow<MainPage>(<MainPage { ...mockProps3 } />);
     expect(wrapper3.instance().filterRobots()).toEqual(filterRobots);
   });
 
@@ -63,13 +63,12 @@ describe('ErrorBoundry component', () => {
       onSearchChange: jest.fn(),
       robots: [],
       searchField: '',
-      isPending: true
-    }
-    const filterRobots: IRobot[] = []
-    const wrapper4 = shallow<MainPage>(<MainPage { ...mockProps4 } />)
+      isPending: true,
+    };
+    const filterRobots: IRobot[] = [];
+    const wrapper4 = shallow<MainPage>(<MainPage { ...mockProps4 } />);
     expect(wrapper4.instance().filterRobots()).toEqual(filterRobots);
     expect(wrapper4.html()).toEqual('<h1 class=\"tc\">Loading Robots...</h1>');
   });
 
-
-})
+});

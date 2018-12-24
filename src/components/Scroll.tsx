@@ -4,7 +4,7 @@ import './Scroll.css';
 class Scroll extends Component {
   render() {
     return (
-      <div className='scroller'>
+      <div className="scroller">
         {this.props.children}
       </div>
     );

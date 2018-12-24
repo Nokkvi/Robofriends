@@ -8,7 +8,7 @@ it('expects to render Card component', () => {
     id: 1,
     name: 'John Smith',
     username: 'Johns',
-    email: 'john@example.com'
-  }
+    email: 'john@example.com',
+  };
   expect(shallow(<Card robot={mockRobot}/>)).toMatchSnapshot();
-})
+});

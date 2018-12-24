@@ -1,4 +1,4 @@
-import { shallow, ShallowWrapper } from 'enzyme';
+import { shallow } from 'enzyme';
 import React from 'react';
 import ErrorBoundry from './ErrorBoundry';
 
@@ -18,4 +18,4 @@ describe('ErrorBoundry component', () => {
     wrapper.instance().componentDidCatch();
     expect(wrapper.instance().state.hasError).toBe(true);
   });
-})
+});

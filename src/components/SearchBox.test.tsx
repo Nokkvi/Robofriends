@@ -6,6 +6,8 @@ it('expects to render SearchBox component', () => {
   const mockSearchField = 'test';
   const mockSearchChange = () => {
     return;
-  }
-  expect(shallow(<SearchBox searchfield={mockSearchField} searchChange={mockSearchChange}/>)).toMatchSnapshot();
-})
+  };
+  expect(shallow(
+    <SearchBox searchfield={mockSearchField} searchChange={mockSearchChange}/>))
+      .toMatchSnapshot();
+});

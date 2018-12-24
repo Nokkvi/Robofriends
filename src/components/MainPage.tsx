@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import CardList from './CardList';
 import Header from './Header';
 import SearchBox from './SearchBox';
@@ -18,16 +18,16 @@ class MainPage extends Component<any, {}> {
     return this.props.robots.filter((robot: any) => {
       return robot.name.toLowerCase().includes(this.props.searchField.toLowerCase());
     });
-  } 
+  }
 
   render() {
-    const {onSearchChange, isPending, searchField} = this.props;
-    
+    const { onSearchChange, isPending, searchField } = this.props;
+
     return isPending ?
-      <h1 className='tc'>Loading Robots...</h1> :
+      <h1 className="tc">Loading Robots...</h1> :
       (
-        <div className='tc'>
-          <div className='header'>
+        <div className="tc">
+          <div className="header">
             <Header />
             <SearchBox searchfield={searchField} searchChange={onSearchChange} />
           </div>

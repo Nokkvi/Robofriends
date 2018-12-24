@@ -1,25 +1,25 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Card from './Card';
 
 import { IRobot } from './interfaces.d';
 
 class CardList extends Component<{robots: IRobot[]}, {}> {
   render() {
-    const {robots} = this.props;
+    const { robots } = this.props;
     return (
       <div>
         {
           robots.map((user: IRobot, i: number) => {
             return (
-              <Card 
-              key={i} 
+              <Card
+              key={i}
               robot={user}
               />
             );
           })
         }
       </div>
-    )
+    );
   }
 }
 

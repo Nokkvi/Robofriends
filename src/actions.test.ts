@@ -9,18 +9,18 @@ import {
 import configureMockStore from 'redux-mock-store';
 import thunkMiddleware from 'redux-thunk';
 
-const mockStore = configureMockStore([thunkMiddleware])
+const mockStore = configureMockStore([thunkMiddleware]);
 
 describe('setSearchField', () => {
   it('should create an action to search robots', () => {
     const text = 'wooo';
     const expectedAction = {
       type: CHANGE_SEARCH_FIELD,
-      payload: text
-    }
-    expect(actions.setSearchField(text)).toEqual(expectedAction)
+      payload: text,
+    };
+    expect(actions.setSearchField(text)).toEqual(expectedAction);
   });
-})
+});
 
 describe('requestRobots', () => {
   const store = mockStore();
@@ -28,14 +28,14 @@ describe('requestRobots', () => {
     store.clearActions();
     store.dispatch<any>(actions.requestRobots());
   });
-  
-  it('handles requesting robots API', async () => {
-    expect(await getAction(store, REQUEST_ROBOTS_PENDING)).toEqual({ type: REQUEST_ROBOTS_PENDING })
-    expect((await getAction(store, REQUEST_ROBOTS_SUCCESS)).type).toEqual(REQUEST_ROBOTS_SUCCESS)
-  });
-})
 
-//UTILS
+  it('handles requesting robots API', async () => {
+    expect(await getAction(store, REQUEST_ROBOTS_PENDING)).toEqual({ type: REQUEST_ROBOTS_PENDING });
+    expect((await getAction(store, REQUEST_ROBOTS_SUCCESS)).type).toEqual(REQUEST_ROBOTS_SUCCESS);
+  });
+});
+
+// UTILS
 
 function findAction(store: any, type: any) {
   return store.getActions().find((action: any) => action.type === type);

@@ -7,26 +7,26 @@ import {
 import { IRobot } from './components/interfaces';
 
 const initialStateSearch = {
-  searchField: ''
-}
+  searchField: '',
+};
 
-export const searchRobots = (state=initialStateSearch, action: {type?: string, payload?: any}) => {
-  switch(action.type) {
+export const searchRobots = (state = initialStateSearch, action: {type?: string, payload?: any}) => {
+  switch (action.type) {
     case CHANGE_SEARCH_FIELD:
-      return Object.assign({}, state, {searchField: action.payload});
-    default: 
+      return Object.assign({}, state, { searchField: action.payload });
+    default:
       return state;
   }
-} 
+};
 
 const initialStateRobots = {
   isPending: false,
   robots: [],
-  error: ''
-}
+  error: '',
+};
 
-export const requestRobots = (state=initialStateRobots, action: {type?: string, payload?: any}) => {
-  switch(action.type) {
+export const requestRobots = (state = initialStateRobots, action: {type?: string, payload?: any}) => {
+  switch (action.type) {
     case REQUEST_ROBOTS_PENDING:
       return Object.assign({}, state, { isPending: true });
     case REQUEST_ROBOTS_SUCCESS:
@@ -36,4 +36,4 @@ export const requestRobots = (state=initialStateRobots, action: {type?: string, 
     default:
       return state;
   }
-}
+};
